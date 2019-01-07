@@ -3,7 +3,11 @@
     <string name="todo">TODO</string>
     <string name="hair_cut_shave_massage_and_lot_more">Hair cut,shave,massage, And lot more</string>
     <string name="at_your_doorstep">At your doorstep</string>
-    <string name="email">Email</string>
+    <string name="email">Email/Mobile</string>
     <string name="password">Password</string>
+    <string name="service_provider_signup_login">Service Provider Signup/Login</string>
+    <string name="new_to_caretaker_sign_up">New to CareTaker? Sign Up</string>
+    <string name="login">Login</string>
+    <string name="signup_login">SignUp/Login</string>
 
 </resources>
