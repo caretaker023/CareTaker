@@ -23,7 +23,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.411"
-        android:autofillHints="" />
+        android:autofillHints=""
+        android:drawableEnd="@drawable/mail"/>
 
     <EditText
         android:id="@+id/editText3"
@@ -42,5 +43,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.52"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        android:drawableEnd="@drawable/lock"/>
 </android.support.constraint.ConstraintLayout>
