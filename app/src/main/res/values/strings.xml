@@ -3,5 +3,7 @@
     <string name="todo">TODO</string>
     <string name="hair_cut_shave_massage_and_lot_more">Hair cut,shave,massage, And lot more</string>
     <string name="at_your_doorstep">At your doorstep</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 
 </resources>
