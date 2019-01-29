@@ -4,10 +4,18 @@
     <string name="hair_cut_shave_massage_and_lot_more">Hair cut,shave,massage, And lot more</string>
     <string name="at_your_doorstep">At your doorstep</string>
     <string name="email">Email/Mobile</string>
-    <string name="password">Password</string>
+    <string name="password1">Password</string>
     <string name="service_provider_signup_login">Service Provider Signup/Login</string>
     <string name="new_to_caretaker_sign_up">New to CareTaker? Sign Up</string>
     <string name="login">Login</string>
     <string name="signup_login">SignUp/Login</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="age">Age</string>
+    <string name="already_signed_in_login">Already Signed in ? Login</string>
+    <string name="signup">SIGNUP</string>
+    <string name="gender">Gender</string>
+    <string name="email_signup">Email</string>
 
 </resources>
