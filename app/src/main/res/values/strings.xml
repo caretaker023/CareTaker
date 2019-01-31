@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">CareTaker</string>
     <string name="todo">TODO</string>
-    <string name="hair_cut_shave_massage_and_lot_more">Hair cut,shave,massage, And lot more</string>
     <string name="at_your_doorstep">At your doorstep</string>
     <string name="email">Email/Mobile</string>
     <string name="password1">Password</string>
@@ -17,5 +16,9 @@
     <string name="signup">SIGNUP</string>
     <string name="gender">Gender</string>
     <string name="email_signup">Email</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="hair_cut_shave_massage_etc">Hair cut,shave,massage etc.</string>
+    <string name="forgot_password">Forgot Password ?</string>
+
 
 </resources>
