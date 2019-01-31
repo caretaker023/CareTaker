@@ -43,10 +43,10 @@ public class HomeActivity extends AppCompatActivity {
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
-        if(user != null){
-            finish();
-            startActivity(new Intent(HomeActivity.this, SigninActivity.class ));
-        }
+       // if(user != null){
+         //   finish();
+        //    startActivity(new Intent(HomeActivity.this, SigninActivity.class ));
+       // }
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
