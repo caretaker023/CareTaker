@@ -17,12 +17,15 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.net.PasswordAuthentication;
+
 public class HomeActivity extends AppCompatActivity {
 
-    private EditText emailmob , password;
-    private Button login,servicepro;
+    private EditText emailmob, password;
+    private Button login, servicepro;
     private TextView signup;
     private FirebaseAuth firebaseAuth;
+    //private FirebaseUser FirebaseUser;
     private ProgressDialog progressDialog;
 
     @Override
@@ -36,49 +39,51 @@ public class HomeActivity extends AppCompatActivity {
         servicepro = (Button) findViewById(R.id.BTservicepro);
         signup = (TextView) findViewById(R.id.TVsignup);
 
-
         firebaseAuth = FirebaseAuth.getInstance();
-
         progressDialog = new ProgressDialog(this);
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
-       // if(user != null){
-         //   finish();
-        //    startActivity(new Intent(HomeActivity.this, SigninActivity.class ));
-       // }
+        if(user != null){
+            finish();
+            startActivity(new Intent(HomeActivity.this,homenav1.class));
+             finish();
+        }
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validate(emailmob.getText().toString(),password.getText().toString());
+                validate(emailmob.getText().toString(), password.getText().toString());
             }
         });
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this,RegistrationActivity.class));
-                finish();
+                startActivity(new Intent(HomeActivity.this, RegistrationActivity.class));
             }
         });
     }
 
-    private void validate(String userName,String Password){
+    private void validate(String emailmob, String password) {
 
-        progressDialog.setMessage("SIT Tight Until VERIFIED!");
+        progressDialog.setMessage("Signing in!!");
         progressDialog.show();
 
-        firebaseAuth.signInWithEmailAndPassword(userName,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        firebaseAuth.signInWithEmailAndPassword(emailmob, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-         //           progressDialog.dismiss();
-                    Toast.makeText(HomeActivity.this,"Login Successful", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(HomeActivity.this, SigninActivity.class ));
-                 }else
-                    Toast.makeText(HomeActivity.this,"Login Failed", Toast.LENGTH_SHORT).show();
+               if(task.isSuccessful()){
+                   progressDialog.dismiss();
+                   Toast.makeText(HomeActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                   startActivity(new Intent(HomeActivity.this,homenav1.class));
+                   finish();
+               }else{
+                   Toast.makeText(HomeActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+               }
             }
         });
     }
+
+
 }
