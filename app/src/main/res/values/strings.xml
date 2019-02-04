@@ -20,6 +20,13 @@
     <string name="hair_cut_shave_massage_etc">Hair cut,shave,massage etc.</string>
     <string name="forgot_password">Forgot Password ?</string>
     <string name="description">description</string>
+    <string name="title_activity_homenav1">homenav1</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

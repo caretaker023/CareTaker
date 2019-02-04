@@ -1,34 +1,48 @@
 package com.example.harshithchoudhary.caretaker;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
-import com.google.firebase.auth.FirebaseAuth;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
+import android.widget.TextView;
 
 public class homenav1 extends AppCompatActivity {
-
-    private FirebaseAuth firebaseAuth;
-    private Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homenav1);
 
-        firebaseAuth = FirebaseAuth.getInstance();
+        BottomNavigationView navigationView = findViewById(R.id.navigation);
 
-        logout=(Button)findViewById(R.id.BTlogout);
+        final HomeFragment homeFragment = new HomeFragment();
+        final BookingFragment bookingFragment = new BookingFragment();
+        final ProfileFragment profileFragment = new ProfileFragment();
 
-        logout.setOnClickListener(new View.OnClickListener() {
+        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                firebaseAuth.signOut();
-                finish();
-                startActivity(new Intent(homenav1.this,HomeActivity.class));
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                if (id==R.id.navigation_home){
+                    setFragment(homeFragment);
+                }else if (id==R.id.navigation_booking){
+                    setFragment(bookingFragment);
+                }else if (id==R.id.navigation_profile){
+                    setFragment(profileFragment);
+                }
+                return false;
             }
         });
+        navigationView.setSelectedItemId(R.id.navigation_home);
     }
+
+    private void setFragment(Fragment fragment){
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace (R.id.frame,fragment);
+        fragmentTransaction.commit();
+    }
+
 }
