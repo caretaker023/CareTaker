@@ -15,7 +15,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:autofillHints=""
-        android:drawableEnd="@drawable/mail"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textPersonName"
@@ -33,16 +32,32 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:drawableEnd="@drawable/lock"
         android:ems="10"
         android:hint="@string/password"
         android:importantForAutofill="no"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.47000003" />
+
+    <CheckBox
+        android:id="@+id/CBcheck"
+        android:text="show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.964"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.458"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView2"
@@ -111,7 +126,7 @@
         app:layout_constraintVertical_bias="0.983" />
 
     <TextView
-        android:id="@+id/TVforgot"
+        android:id="@+id/TVforgotpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

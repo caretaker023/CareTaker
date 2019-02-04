@@ -20,9 +20,8 @@
         </activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".SigninActivity" />
         <activity android:name=".homenav1" />
-        <activity android:name=".abc"></activity>
+        <activity android:name=".ResetPassword"></activity>
     </application>
 
 </manifest>
